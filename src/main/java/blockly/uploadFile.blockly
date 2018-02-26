@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><blockly formTarget="src/main/webapp/views/admin/upload.view.html" resourceType="JAVA" ruleDescription="uploadFile" ruleName="uploadFile" ruleSynchronous="false" ruleTimeout="300" ruleType="I">
+  <metadata scale="1" scrollx="356.99999999999994" scrolly="99.00000000000006" target="Anb:u5+^,0vLkL9QIqn5"/>
+  <block colour="#995ba5" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" tooltip="Creates a function with an output." type="procedures_defreturn" x="-97" y="-82">
+    <field name="NAME">upload</field>
+    <comment h="80" pinned="false" w="160">uploadFile</comment>
+    <statement name="STACK">
+      <block colour="#487f7f" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="$l5Em*!;LbSA[;QAq_Ii" multilayer="false" namespace="cronapi.util.Operations.upload" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EUpload%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3E%22Functionthat%20upload%20files%20to%20server%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Description%20:%20String%3C/span%3E%3Cdiv%3E%20Upload%20window%20description%3C/div%3E%3Cspan%3E%20-%20Filters%20:%20String%3C/span%3E%3Cdiv%3E%20Allowed%20type%20files.%20Ex:%20image/*%3C/div%3E%3Cspan%3E%20-%20Maximum%20size%20:%20String%3C/span%3E%3Cdiv%3E%20File%20maximum%20size%20(bytes),%20defalut%20is%2020MB.%20Example:%2020MB%3C/div%3E%3Cspan%3E%20-%20Multiples%20:%20Object%3C/span%3E%3Cdiv%3E%20Allow%20multiple%20files?%3C/div%3E%3Cspan%3E%20-%20After%20upload%20:%20Commands%20sender%3C/span%3E%3Cdiv%3E%20Statements%20to%20be%20executed%20after%20an%20upload%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.util.Operations.upload%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.util.Operations.upload%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+        <mutation name="{{cronapi.util.Operations.upload}}">
+          <arg cronapi-type="ObjectType.STRING" name="Description"/>
+          <arg cronapi-type="ObjectType.STRING" name="Filters"/>
+          <arg cronapi-type="ObjectType.STRING" name="Maximum size"/>
+          <arg cronapi-type="ObjectType.OBJECT" name="Multiples"/>
+          <arg cronapi-type="ObjectType.STATEMENTSENDER" name="After upload"/>
+        </mutation>
+        <field name="VAR_SENDERARG4">item</field>
+        <value name="ARG0">
+          <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="p5X=[-6LBc*:dP:S024s" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+            <field name="TEXT"/>
+          </shadow>
+        </value>
+        <value name="ARG1">
+          <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="pP7TUX;I2/7oX_JxwiHv" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+            <field name="TEXT">*</field>
+          </shadow>
+        </value>
+        <value name="ARG2">
+          <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=";OHjjBC-t,P(=z(-,Za1" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+            <field name="TEXT">20MB</field>
+          </shadow>
+        </value>
+        <value name="ARG3">
+          <block colour="#487f7f" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="?}^N^bd5Dcbp}JJ_wH1:" origintype="util_dropdown" output="true" type="util_dropdown">
+            <mutation>
+              <arg name="true" value="Yes"/>
+              <arg name="false" value="No"/>
+            </mutation>
+            <field name="SELECT">true</field>
+          </block>
+        </value>
+        <statement name="ARG4">
+          <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="yB|]`Kh6g$wKOJIgB{z6" origintype="variables_set" output="false" tooltip="Sets this variable to be equal to the input." type="variables_set">
+            <field name="VAR">fileToRead</field>
+            <value name="VALUE">
+              <block colour="#723333" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="5^0wG-NS8]]pSuF]CwPB" multilayer="false" namespace="cronapi.io.Operations.fileOpenToRead" origintype="procedures_callreturn" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EOpen%20file%20to%20reading%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20open%20file%20to%20reading.%20This%20function%20is%20used%20to%20get%20a%20file%20reference%20openned%20to%20be%20read.%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Path%20of%20the%20file%20:%20String%3C/span%3E%3Cdiv%3E%20Example:%20TEMPORARY_FOLDER/myFile.txt%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Object%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.io.Operations.fileOpenToRead%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.io.Operations.fileOpenToRead%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                <mutation name="{{cronapi.io.Operations.fileOpenToRead}}">
+                  <arg cronapi-type="ObjectType.STRING" name="Path of the file"/>
+                </mutation>
+                <value name="ARG0">
+                  <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="kmzH5I}Mqz2-)-g-;Cs)" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                    <field name="TEXT"/>
+                  </shadow>
+                  <block colour="#745ba5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="j8$|/gW@re~WLDO~jZ0F" origintype="lists_getIndex" output="true" tooltip="function () {&#10;      var mode = thisBlock.getFieldValue('MODE');&#10;      var where = thisBlock.getFieldValue('WHERE');&#10;      var tooltip = '';&#10;      switch(mode + ' ' + where) {&#10;      case 'GET FROM_START':&#10;      case 'GET FROM_END':&#10;        tooltip = Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_FROM;&#10;        break;&#10;      case 'GET FIRST':&#10;        tooltip = Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_FIRST;&#10;        break;&#10;      case 'GET LAST':&#10;        tooltip = Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_LAST;&#10;        break;&#10;      case 'GET RANDOM':&#10;        tooltip = Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_RANDOM;&#10;        break;&#10;      case 'GET_REMOVE FROM_START':&#10;      case 'GET_REMOVE FROM_END':&#10;        tooltip = Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_REMOVE_FROM;&#10;        break;&#10;      case 'GET_REMOVE FIRST':&#10;        tooltip = Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_REMOVE_FIRST;&#10;        break;&#10;      case 'GET_REMOVE LAST':&#10;        tooltip = Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_REMOVE_LAST;&#10;        break;&#10;      case 'GET_REMOVE RANDOM':&#10;        tooltip = Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_REMOVE_RANDOM;&#10;        break;&#10;      case 'REMOVE FROM_START':&#10;      case 'REMOVE FROM_END':&#10;        tooltip = Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_REMOVE_FROM;&#10;        break;&#10;      case 'REMOVE FIRST':&#10;        tooltip = Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_REMOVE_FIRST;&#10;        break;&#10;      case 'REMOVE LAST':&#10;        tooltip = Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_REMOVE_LAST;&#10;        break;&#10;      case 'REMOVE RANDOM':&#10;        tooltip = Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_REMOVE_RANDOM;&#10;        break;&#10;      }&#10;      if(where == 'FROM_START' || where == 'FROM_END') {&#10;        var msg = (where == 'FROM_START') ? Blockly.Msg.LISTS_INDEX_FROM_START_TOOLTIP : Blockly.Msg.LISTS_INDEX_FROM_END_TOOLTIP;&#10;        tooltip += '  ' + msg.replace('%1', thisBlock.workspace.options.oneBasedIndex ? '#1' : '#0');&#10;      }&#10;      return tooltip;&#10;    }" type="lists_getIndex">
+                    <mutation at="false" statement="false"/>
+                    <field name="MODE">GET</field>
+                    <field name="WHERE">FIRST</field>
+                    <value name="VALUE">
+                      <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="GLL(in7_B#xPN],jm5]]" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                        <field name="VAR">item</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="THQ262lzzyKbu*B[,gm!" origintype="variables_set" output="false" tooltip="Sets this variable to be equal to the input." type="variables_set">
+                <field name="VAR">content</field>
+                <value name="VALUE">
+                  <block colour="#723333" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="L.fXieQ9s`PET24vx+QK" multilayer="false" namespace="cronapi.io.Operations.fileReadContentWithCharset" origintype="procedures_callreturn" output="true" returntype="ObjectType.STRING" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3ERead%20entire%20file%20by%20setting%20charset%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20read%20entire%20file%20by%20defining%20charset.%20Default%20charset%20is%20UTF-8%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Open%20file%20to%20read%20:%20String%3C/span%3E%3Cdiv%3E%20Return%20from%20%22Open%20file%20to%20read%22%3C/div%3E%3Cspan%3E%20-%20Charset%20:%20String%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20String%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.io.Operations.fileReadContentWithCharset%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.io.Operations.fileReadContentWithCharset%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                    <mutation name="{{cronapi.io.Operations.fileReadContentWithCharset}}">
+                      <arg cronapi-type="ObjectType.STRING" name="Open file to read"/>
+                      <arg cronapi-type="ObjectType.STRING" name="Charset"/>
+                    </mutation>
+                    <value name="ARG0">
+                      <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="ILP1Up9=JR`pzV@]E3!1" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                        <field name="TEXT"/>
+                      </shadow>
+                      <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="^uR~Kj6b%uxrg)LiyakY" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                        <field name="VAR">fileToRead</field>
+                      </block>
+                    </value>
+                    <value name="ARG1">
+                      <block colour="#723333" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="*hbB;}GYV+hsS1yR|Y$s" origintype="util_dropdown" output="true" type="util_dropdown">
+                        <mutation>
+                          <arg name="UTF-8" value="UTF-8"/>
+                          <arg name="UTF-16" value="UTF-16"/>
+                          <arg name="US-ASCII" value="US-ASCII"/>
+                          <arg name="ISO-8859-1" value="ISO-8859-1"/>
+                          <arg name="ISO-8859-2" value="ISO-8859-2"/>
+                        </mutation>
+                        <field name="SELECT">UTF-8</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="*0)(=;l!UO^_K%ydOF.D" multilayer="true" namespace="cronapi.screen.changeValueOfField" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EChange%20field%20value%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20change%20field%20value%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Field%20:%20String%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20value%20:%20String%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.changeValueOfField%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.changeValueOfField%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+                    <mutation name="{{cronapi.screen.changeValueOfField}}">
+                      <arg cronapi-type="ObjectType.STRING" name="Field"/>
+                      <arg cronapi-type="ObjectType.STRING" name="value"/>
+                    </mutation>
+                    <value name="ARG0">
+                      <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="$mt^Gx_:E+I6]GZ=9R3*" origintype="form_fieldscreen_callreturn" output="true" type="form_fieldscreen_callreturn">
+                        <field name="SELECT">vars.textarea2138</field>
+                      </block>
+                    </value>
+                    <value name="ARG1">
+                      <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="oU;rIC_qd2.Kwoeeutux" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                        <field name="TEXT"/>
+                      </shadow>
+                      <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="5;-g?ZJjKc2b19#mBy;z" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                        <field name="VAR">content</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+</blockly>
